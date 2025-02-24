@@ -1,0 +1,64 @@
+.footer {
+  background-color: #16284e; /* color2 */
+  color: white;
+  padding: 15px 0; /* Reducimos el padding */
+  text-align: center;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+  max-width: 1100px; /* Reducimos el ancho máximo */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer p {
+  font-size: 0.9rem; /* Reducimos el tamaño de la fuente */
+  color: #f1f1f1;
+  margin-bottom: 10px; /* Reducimos el margen inferior */
+  font-weight: 300; /* Fuente más delgada */
+}
+
+.footer-links {
+  margin-top: 5px; /* Reducimos el margen superior */
+}
+
+.footer-links a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 0.95rem; /* Reducimos el tamaño de la fuente */
+  margin: 0 12px; /* Reducimos el espacio entre los enlaces */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #8194ff; /* color4 */
+  transform: translateY(-2px); /* Efecto más sutil */
+}
+
+.footer-links a:active {
+  color: #cbd3ff; /* color5 */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px 0; /* Reducimos aún más el padding en móviles */
+  }
+
+  .footer p {
+    font-size: 0.8rem; /* Reducimos el tamaño en dispositivos pequeños */
+  }
+
+  .footer-links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links a {
+    margin-bottom: 8px;
+    font-size: 0.9rem; /* Tamaño más pequeño en móviles */
+  }
+}

@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Nunito:wght@400;600&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f9;
+}
+
+.home-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: rgba(255, 255, 255, 0.5); 
+  background-image: url('path/to/your/image.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  margin: 20px auto;
+  padding: 40px;
+  max-width: 900px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.home-content {
+  text-align: center;
+  max-width: 600px;
+  padding: 10px;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  color: #16284e;
+  margin-bottom: 20px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  color: #455aa3;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.home-btn {
+  background-color: #8194ff;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: 600;
+}
+
+.home-btn:hover {
+  background-color: #cbd3ff;
+  transform: translateY(-5px);
+}
+
+.services-section {
+  padding: 40px 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  margin: 30px auto;
+  max-width: 1100px;
+  backdrop-filter: blur(10px);
+}
+
+.services-title {
+  font-size: 2.5rem;
+  color: #16284e;
+  margin-bottom: 30px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.services-grid .service-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-grid .service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.services-grid .service-card h3 {
+  font-size: 1.8rem;
+  color: #16284e;
+  margin-bottom: 15px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.services-grid .service-card p {
+  font-size: 1.1rem;
+  color: #455aa3;
+  line-height: 1.6;
+}
+
+.about-section {
+  padding: 40px 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  margin: 30px auto;
+  max-width: 1100px;
+  backdrop-filter: blur(10px);
+}
+
+.about-title {
+  font-size: 2.4rem;
+  color: #16284e;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  color: #555555;
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .home-main {
+    height: 60vh;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .services-title {
+    font-size: 2.2rem;
+  }
+
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-main {
+    height: auto;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-title {
+    font-size: 2rem;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .home-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}

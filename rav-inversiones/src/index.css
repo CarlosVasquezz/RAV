@@ -1,68 +1,156 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Fuentes globales */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Nunito:wght@400;600&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* Estilos globales para la página */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f9; /* Fondo claro */
+  color: #333;
+  background-image: url('../src/assets/FondoInicio.jpg'); /* Imagen de fondo */
+  background-size: cover; /* La imagen cubre toda la pantalla */
+  background-position: center center; /* Centramos la imagen */
+  background-attachment: fixed; /* Hace que la imagen quede fija cuando se hace scroll */
+  min-height: 100vh; /* Asegura que la página ocupe toda la altura de la ventana */
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Contenedor general de la página */
+.container-global {
+  max-width: 1200px; /* Limitar el tamaño máximo del contenido */
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1; /* Para asegurarnos de que el contenido esté por encima de la imagen de fondo */
+}
+
+/* Estilo para el contenedor de texto o párrafos generales */
+p, h1, h2, h3, h4 {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #16284e; /* Usamos el color de la paleta para los títulos */
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
+  color: #455aa3; /* Color para enlaces */
+  transition: color 0.3s ease;
 }
+
 a:hover {
-  color: #535bf2;
+  color: #8194ff; /* Color cuando se pasa el cursor por encima de los enlaces */
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
+/* Sección de Header Global */
+header {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo ligeramente transparente para el header */
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+header .logo {
+  font-size: 2rem;
+  color: #16284e; /* color2 */
+  font-weight: bold;
+}
+
+header nav a {
+  margin: 0 15px;
+  font-size: 1.1rem;
+}
+
+header nav a:hover {
+  color: #8194ff; /* color4 */
+}
+
+/* Estilo para el footer global */
+footer {
+  padding: 40px 20px;
+  background-color: #16284e; /* color2 */
+  color: #fff;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1rem;
+}
+
+footer a {
+  color: #8194ff; /* color4 */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #cbd3ff; /* color5 */
+}
+
+/* Estilos para los botones globales */
+button, .home-btn {
+  background-color: #8194ff; /* color4 */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: 600;
+  margin: 10px;
+}
+
+button:hover, .home-btn:hover {
+  background-color: #cbd3ff; /* color5 */
+  transform: translateY(-5px);
+}
+
+/* Ajustes de animaciones globales */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  a:hover {
-    color: #747bff;
+  to {
+    opacity: 1;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+/* Aplicar fadeIn a todos los elementos dentro de .container-global */
+.container-global {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  body {
+    background-position: top center; /* Ajustamos la imagen de fondo para pantallas medianas */
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-position: top center; /* Ajustamos para móviles */
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 0.8rem;
   }
 }
